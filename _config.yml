@@ -18,6 +18,7 @@ plugins:
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
   - pages/tags.html
+  - pages/blog.html
   - pages/404.html
   - pages/index.md
   - documentation/partials/**                           # For Documentation Only
@@ -27,22 +28,22 @@ nav_exclude:                                            # The following paths ar
 author:
   name              : Paul Dingus
   image             : https://media.licdn.com/dms/image/C5603AQFoz0Q__gZUvw/profile-displayphoto-shrink_800_800/0/1642103463393?e=1697673600&v=beta&t=3eYhod-aozUFmEqHEpH85FgdQ_ntgV-OnjGaJteuNVA
-  behance           : your_username
+#  behance           : your_username
 # dribbble          : your_username
-  email             : username@domain.com
-  facebook          : your_username
+  email             : pdingus@hks.harvard.edu
+#  facebook          : your_username
   github            : pauldingus
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
   linkedin          : paul-dingus
-  medium            : your_username
+#  medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-  twitter           : your_username
+#  twitter           : your_username
 # vimeo             : your_username
 # youtube           : your_channel_name
 # keybase           : your_username
