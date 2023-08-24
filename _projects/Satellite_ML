@@ -19,7 +19,6 @@ Monitoring and preventing tropical deforestation is key to mitigating climate ch
 
 This project uses the EuroSat dataset:
 
-{% include elements/figure.html image="/_data/images/land_use_examples.jpg" caption="EuroSat image data" %}
+{% include elements/figure.html image="/assets/images/land_use_examples.jpg" caption="EuroSat image data" %}
 
-![image tooltip here](/_data/images/land_use_examples.jpg)
 
