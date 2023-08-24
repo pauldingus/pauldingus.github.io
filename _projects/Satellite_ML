@@ -21,3 +21,5 @@ This project uses the EuroSat dataset:
 
 {% include elements/figure.html image="/_data/images/land_use_examples.jpg" caption="EuroSat image data" %}
 
+![image tooltip here](/_data/images/land_use_examples.jpg)
+
