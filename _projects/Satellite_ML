@@ -1,7 +1,7 @@
 ---
 name: ML Deforestation Detection
-tools: [Python, ML]
-image: pauldingus.github.io/_projects/images/land_use_examples.png
+tools: [Python, ML, Geospatial]
+image: https://www.sketchappsources.com/resources/source-image/coo-app-concept-subgaurav.jpg
 description: Monitoring Deforestation using Deep Learning with Satellite Data
 ---
 
