@@ -1,5 +1,5 @@
 ---
-name: Test Project
+name: ML Deforestation Detection
 tools: [Python, ML, Geospatial]
 image: /assets/images/land_use_examples.jpg" caption="EuroSat image data
 description: Monitoring Deforestation using Deep Learning with Satellite Data
@@ -7,9 +7,13 @@ description: Monitoring Deforestation using Deep Learning with Satellite Data
 
 # Monitoring Deforestation using Deep Learning with Satellite Data
 
+</br>
+
 <p>
 {% include elements/button.html link="https://github.com/pauldingus/EuroSat-land-classifier/blob/main/Readme.md" text="View the Code on GitHub" %}
 </p>
+
+</br>
 
 ### CNN Land Classification Model and Application for the Indonesian province of Ketapang
 
@@ -17,7 +21,11 @@ description: Monitoring Deforestation using Deep Learning with Satellite Data
 
 This project aims to demonstrate the viability of free, open-source deforestation measurement via machine learning. The goal is to develop a reliable classification model that could be applied to deforestation monitoring at a global scale, and apply it in real-world deforestation detection in Indonesia.
 
+</br>
+
 ### Step 1: Train a Land Classification Algorithm 
+
+</br>
 
 #### *The data*
 
@@ -41,7 +49,11 @@ For this project, I built two models, both of them CNNs, as I wanted to experime
 
 {% include elements/figure.html image="/assets/images/Transfer_CNN_Performance.png" caption="" %}
 
+</br>
+
 ### Step 2: Apply to New Data and Map Some Deforestation
+
+</br>
 
 #### *Data Extraction*
 
@@ -53,13 +65,13 @@ Image data were extracted from the European earth observation program Sentinel-2
 
 Once the raster file is implorted into Python, I split it into 64 x 64 images, matching the original training data format. .tiff files also simply mark any pixels outside the shapefile as black, so I created a basic image mask to exclude images with any of those empty pixels.
 
-####  *Dealing with Clouds*
+#### *Dealing with Clouds*
 
 Even though we tried to minimize cloud cover in the assembled satellite images, there was still sparse cloud cover. Neural networks tend to struggle with out-of-class images, and mine were not trained to ignore clouds. Therefore, I filtered out cloudy 64x64 tiles by removing those with higher average pixel values (as white clouds drive up the value of pixels in the image). This worked reasonably well:
 
 {% include elements/figure.html image="/assets/images/Cloud_Examples.png" caption="Example of images that tripped the cloud detector." %}
 
-####  *Dealing with out-of-sample issues*
+#### *Dealing with out-of-sample issues*
 
 Even with high performance on the EuroSAT dataset, our model may struggle with different context of rural Indonesia. To help alleviate the likelihood of misclassification, we ignored predicted results in which the highest value in the softmax output vector was less than 0.95. This eliminated a significant portion of predictions but allowed us to produce a final set of results in which we were more confident.
 
@@ -79,7 +91,11 @@ As mentioned before, there are some serious concerns with the out-of-sample natu
 
 We can see that, while some of these might be detecting actual deforestation, most of them are definitely not. In my mind, this meets the project goals in that it serves as a valid proof-of-concept for this technology. However, it clearly needs much more development and fine-tuning before real-world utilization.
 
+</br>
+
 ### Next Steps...
+
+</br>
 
 #### *Fine-tuning with custom Indonesia data*
 
