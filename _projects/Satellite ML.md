@@ -57,9 +57,9 @@ For this project, I built two models, both of them CNNs, as I wanted to experime
 
 &nbsp;
 
-#### *Data Extraction*
+Credit to my collaborators Sohee Hyung, Justine Bailliart, and Sang-gyu Jung for assistance with this portion!
 
-Credit to collaborators Sohee Hyung, Justine Bailliart, and Sang-gyu Jung for assistance with this portion!
+#### *Data Extraction*
 
 Image data were extracted from the European earth observation program Sentinel-2 and merged with a shapefile for the Indonesian province of Ketapang on Borneo Island. We downloaded raster files from the Copernicus Browser6 for two periods, one ranging from 01/2020 to 12/2020, and one ranging from 07/2022 to 04/2023.
 
