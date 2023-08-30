@@ -17,7 +17,7 @@ description: Monitoring Deforestation using Deep Learning with Satellite Data
 
 This project aims to demonstrate the viability of free, open-source deforestation measurement via machine learning. The goal is to develop a reliable classification model that could be applied to deforestation monitoring at a global scale, and apply it in real-world deforestation detection in Indonesia.
 
-### Step One: Train a land classification algorithm 
+### Step 1: Train a Land Classification Algorithm 
 
 #### *The data*
 
@@ -37,11 +37,27 @@ For this project, I built two models, both of them CNNs, as I wanted to experime
 
 {% include elements/figure.html image="/assets/images/Custom_CNN_Performance.png" caption="" %}
 
-<b>Transfer learning with ResNet 152v2</b>: Transfer learning involves first downloading and instantiating an existing pre-trained neural network. We used ResNet152v2, a high-performing but relatively low-weight neural network. ResNet152v2 is a 152-layer network that makes clever use of skip-connections and other learning techniques to allow for much deeper models. Since ResNet normally expects a 224 by 224 image, I added a 64 by 64 input later, as well as a fully-connected layer and an output layer at the end. I first trained just the new input and output layers for 20 epochs at a normal learning rate to allow them to “catch up” to the rest of the weights. We then trained the entire model at a very low learning rate for another 10 epochs. This strategy is generally in line with the norms of transfer learning. The results for this method were extremely promising, reaching nearly 95% accuracy (in line with state-of-the-art research). Due to its superior performance, I elected to use this model for the remainder of our analysis.
+<u>Transfer learning with ResNet 152v2</u>: Transfer learning involves first downloading and instantiating an existing pre-trained neural network. We used ResNet152v2, a high-performing but relatively low-weight neural network. ResNet152v2 is a 152-layer network that makes clever use of skip-connections and other learning techniques to allow for much deeper models. Since ResNet normally expects a 224 by 224 image, I added a 64 by 64 input later, as well as a fully-connected layer and an output layer at the end. I first trained just the new input and output layers for 20 epochs at a normal learning rate to allow them to “catch up” to the rest of the weights. We then trained the entire model at a very low learning rate for another 10 epochs. This strategy is generally in line with the norms of transfer learning. The results for this method were extremely promising, reaching nearly 95% accuracy (in line with state-of-the-art research). Due to its superior performance, I elected to use this model for the remainder of our analysis.
 
 {% include elements/figure.html image="/assets/images/Transfer_CNN_Performance.png" caption="" %}
 
-#### *Applying the Model to New Data*
+### Step 2: Apply to New Data
+
+#### *Data Extraction*. 
+
+Credit to collaborators Sohee Hyung, Justine Bailliart, and Sang-gyu Jung for assistance with this portion!
+
+Images were extracted from the European earth observation program Sentinel-2 and merged with a shapefile for the Indonesian province of Ketapang on Borneo Island. We downloaded raster files from the Copernicus Browser6 for two periods, one ranging from 01/2020 to 12/2020, and one ranging from 07/2022 to 04/2023.
+
+####  *Dealing with Clouds. 
+
+Step 2 – “Clouds” treatment. To reduce misclassification resulting from cloud overlays, we selected images with a cloud coverage rate below fifteen percent. In practice, finding low cloud coverage images is difficult due to the high density of clouds prevalent in rainforests. As a result, in areas with large cloud overlays, we extracted two or three images from adjacent periods to remove clouds through processing.
+Step 3 – GIS processing. Then, we processed the raster files on a geographic Information System (GIS) software. This consisted of 1) extracting and normalizing the RGB color bands7 from the satellite data, 2) processing images to minimize cloud overlays, and 3) stitching the various satellite images into one large raster file consisting of the entire Ketapang province [Appendix 3].
+6 https://dataspace.copernicus.eu/browser/
+7 B02, B03, B04 bands, for 10m resolution images.
+ 
+Step 4 – Slicing. Once the dataset was compiled and exported as image files, we sliced the final image into smaller “chunks” of 64x64 pixels to resemble the images used in the classifier model.
+These data preparation steps to generate the Indonesia dataset were computationally intensive.
 
 
 #### *Mapping Deforestation*
