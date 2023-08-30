@@ -47,13 +47,9 @@ For this project, I built two models, both of them CNNs, as I wanted to experime
 
 <u>Transfer learning with ResNet 152v2</u>: Transfer learning involves first downloading and instantiating an existing pre-trained neural network. We used ResNet152v2, a high-performing but relatively low-weight neural network. ResNet152v2 is a 152-layer network that makes clever use of skip-connections and other learning techniques to allow for much deeper models. Since ResNet normally expects a 224 by 224 image, I added a 64 by 64 input later, as well as a fully-connected layer and an output layer at the end. I first trained just the new input and output layers for 20 epochs at a normal learning rate to allow them to “catch up” to the rest of the weights. We then trained the entire model at a very low learning rate for another 10 epochs. This strategy is generally in line with the norms of transfer learning. The results for this method were extremely promising, reaching nearly 95% accuracy (in line with state-of-the-art research). Due to its superior performance, I elected to use this model for the remainder of our analysis.
 
-{% include elements/figure.html image="/assets/images/Transfer_CNN_Performance.png" caption="" %}
+{% include elements/figure.html image="/assets/images/Transfer_CNN_Performance.png" caption="" %}  
 
-</br>
-
-### Step 2: Apply to New Data and Map Some Deforestation
-
-</br>
+### Step 2: Apply to New Data and Map Some Deforestation  
 
 #### *Data Extraction*
 
