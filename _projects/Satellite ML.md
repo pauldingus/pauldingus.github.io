@@ -7,13 +7,13 @@ description: Monitoring Deforestation using Deep Learning with Satellite Data
 
 # Monitoring Deforestation using Deep Learning with Satellite Data
 
-</br>
+&nbsp;
 
 <p>
 {% include elements/button.html link="https://github.com/pauldingus/EuroSat-land-classifier/blob/main/Readme.md" text="View the Code on GitHub" %}
 </p>
 
-</br>
+&nbsp;
 
 ### CNN Land Classification Model and Application for the Indonesian province of Ketapang
 
@@ -49,11 +49,11 @@ For this project, I built two models, both of them CNNs, as I wanted to experime
 
 {% include elements/figure.html image="/assets/images/Transfer_CNN_Performance.png" caption="" %}
 
-&NewLine;
+&nbsp;
 
 ### Step 2: Apply to New Data and Map Some Deforestation
 
-&NewLine;
+&nbsp;
 
 #### *Data Extraction*
 
