@@ -10,3 +10,7 @@ description: This project has an individual showcase page, not just a direct lin
 The Movies Project is something like **Netflix**, the only difference is that **it's not real**! It doesn't exist! I just created it to demonstrate how the **showcase** page looks like and how you can write whatever you want with full markdown support.
 
 ## Search Movies
+
+<p>
+{% include elements/button.html link="https://github.com/pauldingus/EuroSat-land-classifier/blob/main/Readme.md" text="View the Code on GitHub" %}
+</p>
