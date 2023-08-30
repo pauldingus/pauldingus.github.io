@@ -1,9 +1,11 @@
 ### Site Settings ###
-title               : Paul Dingus
+title               : portfolYOU
 description         : >-
-                      I'm a data scientist and energy nerd committed to creating sustainable solutions to pressing problems.
-baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : pauldingus/pauldingus.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+                      I turn coffee :coffee: into code,
+                      use tabs over spaces
+                      and never broke production.
+baseurl             : "/portfolYOU"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository          : YoussefRaafatNasry/portfolYOU     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
@@ -16,7 +18,6 @@ plugins:
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
   - pages/tags.html
-  - pages/blog.html
   - pages/404.html
   - pages/index.md
   - documentation/partials/**                           # For Documentation Only
@@ -24,24 +25,24 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : Paul Dingus
-  image             : https://media.licdn.com/dms/image/C5603AQFoz0Q__gZUvw/profile-displayphoto-shrink_800_800/0/1642103463393?e=1697673600&v=beta&t=3eYhod-aozUFmEqHEpH85FgdQ_ntgV-OnjGaJteuNVA
-#  behance           : your_username
+  name              : John Doe
+  image             : https://i.imgur.com/uyDNQnn.jpg
+  behance           : your_username
 # dribbble          : your_username
-  email             : pdingus@hks.harvard.edu
-#  facebook          : your_username
-  github            : pauldingus
+  email             : username@domain.com
+  facebook          : your_username
+  github            : your_username
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : paul-dingus
-#  medium            : your_username
+  linkedin          : your_username
+  medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-#  twitter           : your_username
+  twitter           : your_username
 # vimeo             : your_username
 # youtube           : your_channel_name
 # keybase           : your_username
@@ -55,7 +56,7 @@ permalink: /blog/:title
 collections:
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /projects/:name
   elements:                                             # For Documentation Only
     output: true                                        # For Documentation Only
 
@@ -107,4 +108,3 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
-  - vendor
