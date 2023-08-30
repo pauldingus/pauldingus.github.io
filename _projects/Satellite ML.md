@@ -17,6 +17,8 @@ description: Monitoring Deforestation using Deep Learning with Satellite Data
 
 ### CNN Land Classification Model and Application for the Indonesian province of Ketapang
 
+&nbsp;
+
  Accounting for over 10% of global GHG emissions, tropical deforestationone of the major drivers of greenhouse gas emissions. Therefore, monitoring and preventing deforestation is key to mitigating climate change. Satellite image data is becomming more readily and freely accessible, making it one of the most promising methods to quickly identify and measure deforestation activity.
 
 This project aims to demonstrate the viability of free, open-source deforestation measurement via machine learning. The goal is to develop a reliable classification model that could be applied to deforestation monitoring at a global scale, and apply it in real-world deforestation detection in Indonesia.
