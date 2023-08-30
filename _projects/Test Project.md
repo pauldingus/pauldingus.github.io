@@ -41,24 +41,51 @@ For this project, I built two models, both of them CNNs, as I wanted to experime
 
 {% include elements/figure.html image="/assets/images/Transfer_CNN_Performance.png" caption="" %}
 
-### Step 2: Apply to New Data
+### Step 2: Apply to New Data and Map Some Deforestation
 
-#### *Data Extraction*. 
+#### *Data Extraction*
 
 Credit to collaborators Sohee Hyung, Justine Bailliart, and Sang-gyu Jung for assistance with this portion!
 
-Images were extracted from the European earth observation program Sentinel-2 and merged with a shapefile for the Indonesian province of Ketapang on Borneo Island. We downloaded raster files from the Copernicus Browser6 for two periods, one ranging from 01/2020 to 12/2020, and one ranging from 07/2022 to 04/2023.
+Image data were extracted from the European earth observation program Sentinel-2 and merged with a shapefile for the Indonesian province of Ketapang on Borneo Island. We downloaded raster files from the Copernicus Browser6 for two periods, one ranging from 01/2020 to 12/2020, and one ranging from 07/2022 to 04/2023.
 
-####  *Dealing with Clouds. 
+#### *Data Processing*
 
-Step 2 – “Clouds” treatment. To reduce misclassification resulting from cloud overlays, we selected images with a cloud coverage rate below fifteen percent. In practice, finding low cloud coverage images is difficult due to the high density of clouds prevalent in rainforests. As a result, in areas with large cloud overlays, we extracted two or three images from adjacent periods to remove clouds through processing.
-Step 3 – GIS processing. Then, we processed the raster files on a geographic Information System (GIS) software. This consisted of 1) extracting and normalizing the RGB color bands7 from the satellite data, 2) processing images to minimize cloud overlays, and 3) stitching the various satellite images into one large raster file consisting of the entire Ketapang province [Appendix 3].
-6 https://dataspace.copernicus.eu/browser/
-7 B02, B03, B04 bands, for 10m resolution images.
- 
-Step 4 – Slicing. Once the dataset was compiled and exported as image files, we sliced the final image into smaller “chunks” of 64x64 pixels to resemble the images used in the classifier model.
-These data preparation steps to generate the Indonesia dataset were computationally intensive.
+Once the raster file is implorted into Python, I split it into 64 x 64 images, matching the original training data format. .tiff files also simply mark any pixels outside the shapefile as black, so I created a basic image mask to exclude images with any of those empty pixels.
 
+####  *Dealing with Clouds*
+
+Even though we tried to minimize cloud cover in the assembled satellite images, there was still sparse cloud cover. Neural networks tend to struggle with out-of-class images, and mine were not trained to ignore clouds. Therefore, I filtered out cloudy 64x64 tiles by removing those with higher average pixel values (as white clouds drive up the value of pixels in the image). This worked reasonably well:
+
+{% include elements/figure.html image="/assets/images/Cloud_Examples.png" caption="Example of images that tripped the cloud detector." %}
+
+####  *Dealing with out-of-sample issues*
+
+Even with high performance on the EuroSAT dataset, our model may struggle with different context of rural Indonesia. To help alleviate the likelihood of misclassification, we ignored predicted results in which the highest value in the softmax output vector was less than 0.95. This eliminated a significant portion of predictions but allowed us to produce a final set of results in which we were more confident.
+
+Once these precautions are taken, the classifier seems to translate surprisingly well to the Indonesia image data. Here's a random sample of classified data from Ketapang:
+
+{% include elements/figure.html image="/assets/images/Classification_Examples.png" caption="" %}
 
 #### *Mapping Deforestation*
+
+Prediction was performed on the Indonesia data from both 2020 and 2022. After making sure that the corresponding images from each time period lined up. Then, it's just a simple matter of identifying any images which were labeled "forest" in 2020 and something else in 2022.
+
+{% include elements/figure.html image="/assets/images/Deforestation_Map.png" caption="Map of where the algorithm flagged as deforestated." %}
+
+As mentioned before, there are some serious concerns with the out-of-sample nature of this indonesia data. Just to eye-test our results, I pulled some comparison images in the areas that our algorithm flagged.
+
+{% include elements/figure.html image="/assets/images/Comparison.png" caption="Left: 2020, right: 2022." %}
+
+We can see that, while some of these might be detecting actual deforestation, most of them are definitely not. In my mind, this meets the project goals in that it serves as a valid proof-of-concept for this technology. However, it clearly needs much more development and fine-tuning before real-world utilization.
+
+### Next Steps...
+
+#### *Fine-tuning with custom Indonesia data*
+
+The next thing I'd like to do here is fine tune the algorithm on a custom-labeled dataset from Indonesia. In fact, the first pass of our model can prove usefule here, as it has lebelled what it *thinks* is forest vs. non-forest, making it easy for us to go through, check the labels, and quickly reach a nicely populated training set. Fine-tuning the model with this new dataset should allow us to leave the European biases in the rear-view mirror.
+
+#### *Explore automation*
+
+I'm not sure what APIs the good people as Sentinel-2 have implemented, or what they cost, but this functionality is obviously prerequisite for a fully-functioning product. I'd like to at least toy around with it to round out the proof-of-concept pipeline.
 
