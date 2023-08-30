@@ -5,7 +5,9 @@ image: https://www.sketchappsources.com/resources/source-image/coo-app-concept-s
 description: Monitoring Deforestation using Deep Learning with Satellite Data
 ---
 
-# Monitoring Deforestation using Deep Learning with Satellite Data
+<head>
+  <title>Monitoring Deforestation using Deep Learning with Satellite Data</title>
+</head>
 
 #### CNN Land Classification Model and Application for the Indonesian province of Ketapang
 
