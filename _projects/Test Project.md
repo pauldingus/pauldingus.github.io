@@ -14,3 +14,7 @@ The Movies Project is something like **Netflix**, the only difference is that **
 <p>
 {% include elements/button.html link="https://github.com/pauldingus/EuroSat-land-classifier/blob/main/Readme.md" text="View the Code on GitHub" %}
 </p>
+
+This project uses the EuroSat dataset:
+
+{% include elements/figure.html image="/assets/images/land_use_examples.jpg" caption="EuroSat image data" %}
