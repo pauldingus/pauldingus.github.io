@@ -10,7 +10,7 @@ description: Monitoring Deforestation using Deep Learning with Satellite Data
 &nbsp;
 
 <p>
-{% include elements/button.html link="https://github.com/pauldingus/EuroSat-land-classifier/blob/main/Readme.md" text="View the Code on GitHub" %}
+{% include elements/button.html link="https://github.com/pauldingus/EuroSat-land-classifier/" text="View the Code on GitHub" %}
 </p>
 
 &nbsp;
