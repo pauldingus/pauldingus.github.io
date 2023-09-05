@@ -1,7 +1,7 @@
 ---
 name: Thesis – Financing Climate Adaptation in Public Transit
 tools: [R]
-image: /assets/images/thesis.png" caption="EuroSat image data
+image: /assets/images/thesis.png
 description: Demonstrating a system of flood cost modelling to support climate adaptation investment in the Lonon Underground.
 ---
 
