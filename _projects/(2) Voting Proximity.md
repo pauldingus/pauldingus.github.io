@@ -1,7 +1,7 @@
 ---
 name: South Carolina Voting Accessibility
 tools: [R, Geospatial]
-image: /assets/images/Low_Density_Prop_Black.jpg" caption="EuroSat image data
+image: /assets/images/sc/Low_Density_Prop_Black.jpg" caption="EuroSat image data
 description: Investigating whether there are racial disparities in polling place accessibility in South Carolina.
 ---
 
