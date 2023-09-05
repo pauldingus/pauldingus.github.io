@@ -23,4 +23,4 @@ In 2019, I volunteered with a congressional candidate in a special election in N
 
 As with many cases involving voting district geographic data, half the challenge here was just getting the correct data. Thank you to ____ for going through the effort of making available address lists of U.S. polling places in every state for the 2018 election. You can access them [here](https://github.com/PublicI/us-polling-places).
 
-
+change
