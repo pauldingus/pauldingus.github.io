@@ -1,7 +1,7 @@
 ---
 name: South Carolina Voting Accessibility
 tools: [R, Geospatial]
-image: /assets/images/sc/sc_cover_image.jpg
+image: /assets/images/sc/sc_cover_image.png
 description: Investigating whether there are racial disparities in polling place accessibility in South Carolina.
 ---
 
