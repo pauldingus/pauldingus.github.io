@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Paul Dingus
 description         : >-
-                      I'm a data scientist and policy nerd committed to creating sustainable solutions to pressing problems. I'm currently very interested in remote sensing and other uses of big data to inform economic policy.
+                      I'm a data scientist and energy nerd committed to creating sustainable solutions to pressing problems.
 baseurl             : "/portfolYOU"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : pauldingus/pauldingus.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
