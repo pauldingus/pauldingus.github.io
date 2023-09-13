@@ -1,17 +1,24 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Master's in Public Policy, Harvard Kennedy School
+  from: 2021
+  to: 2023
+  description: At HKS, I focused on bridging the gap between data science and policy action. I focused on data science and economics, 
+               taking courses in urban economics, energy and environmental economics, 
 
-- title: Software Engineer, Google, UK
+- title: Co-founder and Technical Director, Bluebonnet Data
   from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  to: 2021
+  description: [Bluebonnet Data](https://www.bluebonnetdata.org/) started out as a group of political data nerds 
+               volunteering for handful progressive campaigns. Now it is is a national nonprofit with a 
+               mission to democratize data. We recruit, train, and organize people with skills in coding and data science 
+               to volunteer on data analyst teams for progressive campaigns and causes. I co-founded Bluebonnet, 
+               stepping in as Bluebonnet's Technical Director and employee \#2 in 2018, growing the organization from a 
+               dozen volunteer teams to more than 300 over the course of a year. I led the creation of Bluebonnet's technical infrastructure,
+               training programs, knowledge management systems, and all internal programs and resources. Building an 
+               organization like Bluebonnet was the experience of a lifetime, and taught me more than I could have imagined about 
+               organizational management, political and demographic data work, and entrepreneurship. I am still involved as a 
+               volunteer and board member.
+
+- title: Policy Research Fellow / Community Outreach Coordinator, Solstice Technologies
+  from: 2017
+  to: 2018
+  description: My first few years out of college
