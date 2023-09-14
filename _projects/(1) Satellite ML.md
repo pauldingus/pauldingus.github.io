@@ -19,7 +19,7 @@ description: Monitoring Deforestation using Deep Learning with Satellite Data
 
 &nbsp;
 
- Accounting for over 10% of global GHG emissions, tropical deforestationone of the major drivers of greenhouse gas emissions. Therefore, monitoring and preventing deforestation is key to mitigating climate change. Satellite image data is becomming more readily and freely accessible, making it one of the most promising methods to quickly identify and measure deforestation activity.
+ Accounting for over 10% of global GHG emissions, tropical deforestation is one of the major drivers of greenhouse gas emissions. Therefore, monitoring and preventing deforestation is key to mitigating climate change. Satellite image data is becoming more readily and freely accessible, making it one of the most promising methods to quickly identify and measure deforestation activity.
 
 This project aims to demonstrate the viability of free, open-source deforestation measurement via machine learning. The goal is to develop a reliable classification model that could be applied to deforestation monitoring at a global scale, and apply it in real-world deforestation detection in Indonesia.
 
@@ -37,7 +37,7 @@ To build the classifier model, I used the [EuroSAT dataset](https://github.com/p
 
 One advantage of the Eurosat dataset is that it uses [Sentinel-2 satellite image data](https://sentinel.esa.int/web/sentinel/sentinel-data-access), which is open source and freely available. This means we can test our algorithm on newly-pulled Sentinel-2 data in Indonesia.
 
-Another advantage is the dataset's size and standard usage as a dataset for training land-use classification algorithms. However, the majority of its image data are from europe, and it includes very few forest images (and no rainforest). This means that applicability to out-of-distribution data like images of Indonesian rainforest could be a problem.
+Another advantage is the dataset's size and standard usage as a dataset for training land-use classification algorithms. However, the majority of its image data are from Europe, and it includes very few forest images (and no rainforest). This means that applicability to out-of-distribution data like images of Indonesian rainforest could be a problem.
 
 #### *Training the Model*
 
@@ -65,7 +65,7 @@ Image data were extracted from the European earth observation program Sentinel-2
 
 #### *Data Processing*
 
-Once the raster file is implorted into Python, I split it into 64 x 64 images, matching the original training data format. .tiff files also simply mark any pixels outside the shapefile as black, so I created a basic image mask to exclude images with any of those empty pixels.
+Once the raster file is imported into Python, I split it into 64 x 64 images, matching the original training data format. .tiff files also simply mark any pixels outside the shapefile as black, so I created a basic image mask to exclude images with any of those empty pixels.
 
 #### *Dealing with Clouds*
 
@@ -87,7 +87,7 @@ Prediction was performed on the Indonesia data from both 2020 and 2022. After ma
 
 {% include elements/figure.html image="/assets/images/Deforestation_Map.png" caption="Map of where the algorithm flagged as deforestated." %}
 
-As mentioned before, there are some serious concerns with the out-of-sample nature of this indonesia data. Just to eye-test our results, I pulled some comparison images in the areas that our algorithm flagged.
+As mentioned before, there are some serious concerns with the out-of-sample nature of this Indonesia data. Just to eye-test our results, I pulled some comparison images in the areas that our algorithm flagged.
 
 {% include elements/figure.html image="/assets/images/Comparison.png" caption="Left: 2020, right: 2022." %}
 
@@ -101,7 +101,7 @@ We can see that, while some of these might be detecting actual deforestation, mo
 
 #### *Fine-tuning with custom Indonesia data*
 
-The next thing I'd like to do here is fine tune the algorithm on a custom-labeled dataset from Indonesia. In fact, the first pass of our model can prove usefule here, as it has lebelled what it *thinks* is forest vs. non-forest, making it easy for us to go through, check the labels, and quickly reach a nicely populated training set. Fine-tuning the model with this new dataset should allow us to leave the European biases in the rear-view mirror.
+The next thing I'd like to do here is fine tune the algorithm on a custom-labeled dataset from Indonesia. In fact, the first pass of our model can prove useful here, as it has labeled what it *thinks* is forest vs. non-forest, making it easy for us to go through, check the labels, and quickly reach a nicely populated training set. Fine-tuning the model with this new dataset should allow us to leave the European biases in the rear-view mirror.
 
 #### *Explore automation*
 
