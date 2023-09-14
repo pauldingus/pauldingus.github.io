@@ -1,8 +1,16 @@
 - title: Masters in Public Policy, Harvard Kennedy School
-  from: 2018
-  to: 2021
+  from: 2021
+  to: 2023
   description: At HKS, I focused on bridging the gap between data science and policy action. I studied analytical methods, finance, and economics. 
-               I took courses in urban economics, energy and environmental economics, 
+               I took courses in urban economics, energy and environmental economics, public finance, macroeconomics, and market failures. For my thesis, 
+               I worked with Transport for London, proposing a flood cost modeling system for the London Underground to underpin climate adaptation investment.
+
+- title: Summer Fellow, Bloomberg Harvard City Leadership Initiative
+  from: 2022
+  to: 2022
+  description: I spend the summer of 2022 in Pretoria, South Africa advising the Mayor and his team on data-driven strategy, with a paricular focus on increasing
+               the efficiency of municipal water delivery. I worked across several city departments, collecting and merging data that pertained to the water system, 
+               assembling analyses and reports, and (most importantly) assebling a supportive coalition to enable action. 
 
 - title: Founder and Technical Director, Bluebonnet Data
   from: 2018
@@ -17,12 +25,3 @@
                organization like Bluebonnet was the experience of a lifetime, and taught me more than I could have imagined about 
                organizational management, political and demographic data work, and entrepreneurship. I am still involved as a 
                volunteer and board member.
-
-- title: Software Engineer, Google, UK
-  from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
