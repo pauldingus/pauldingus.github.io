@@ -43,7 +43,7 @@ Another advantage is the dataset's size and standard usage as a dataset for trai
 
 For this project, I built two models, both of them CNNs, as I wanted to experiment with home-grown networks as well as transfer learning.
 
-**Custom CNN:** For the custom model, I built a 20-layer neural network (19 hidden layers), which includes 3 “sets” of layers, each with 3 convolutional layers followed by batch normalization layers. These sets of layers are each followed by a max pooling layer, decreasing the dimensions of the data, but increasing the depth (from 256, to 512, to 728). There is then one dense layer of size 1024 before the output layer. This model performed reasonably well, reaching over 88% test accuracy after only 10 epochs of training without any hyperparameter tuning.
+<u>Custom CNN</u>: For the custom model, I built a 20-layer neural network (19 hidden layers), which includes 3 “sets” of layers, each with 3 convolutional layers followed by batch normalization layers. These sets of layers are each followed by a max pooling layer, decreasing the dimensions of the data, but increasing the depth (from 256, to 512, to 728). There is then one dense layer of size 1024 before the output layer. This model performed reasonably well, reaching over 88% test accuracy after only 10 epochs of training without any hyperparameter tuning.
 
 {% include elements/figure.html image="/assets/images/Custom_CNN_Performance.png" caption="" %}
 
@@ -89,7 +89,7 @@ Prediction was performed on the Indonesia data from both 2020 and 2022. After ma
 
 As mentioned before, there are some serious concerns with the out-of-sample nature of this Indonesia data. Just to eye-test our results, I pulled some comparison images in the areas that our algorithm flagged.
 
-{% include elements/figure.html image="/assets/images/Comparison.png" caption="Left: 2020, right: 2022." %}
+{% include elements/figure.html image="/assets/images/Comparison.png" caption="Left: 2020, right: 2023." %}
 
 We can see that, while some of these might be detecting actual deforestation, most of them are definitely not. In my mind, this meets the project goals in that it serves as a valid proof-of-concept for this technology. However, it clearly needs much more development and fine-tuning before real-world utilization.
 
