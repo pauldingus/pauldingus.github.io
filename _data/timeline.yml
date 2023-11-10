@@ -1,3 +1,10 @@
+- title: Research Data Scientist, Stanford Doerr School for Sustainability
+  from: 2021
+  to: 2023
+  description: Using satellite data and image modeling to bring the Market Activity Index project to fruition. We are building a set of automated tools to
+               autonomously locate and track weekly activity at open-air markets around the world. We will publish this data as a public good, providing precious 
+               economic information for towns and villages across the world's developing country.
+
 - title: Master in Public Policy, Harvard Kennedy School
   from: 2021
   to: 2023
@@ -15,9 +22,8 @@
 - title: Founder and Technical Director, Bluebonnet Data
   from: 2018
   to: 2021
-  description: Bluebonnet Data started out as a group of political data nerds 
-               volunteering for handful progressive campaigns. Now it is is a national nonprofit with a 
-               mission to democratize data. We recruit, train, and organize people with skills in coding and data science 
+  description: What out as a group of political data nerds volunteering for handful progressive campaigns is now a national nonprofit with a 
+               mission to democratize data. We recruit, train, and organize people with technical skill sets 
                to volunteer on data analyst teams for progressive campaigns and causes. I co-founded Bluebonnet, 
                stepping in as Bluebonnet's Technical Director and employee number two in 2018, growing the organization from a 
                dozen volunteer teams to more than 300 over the course of a year. I led the creation of Bluebonnet's technical infrastructure,
