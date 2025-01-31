@@ -22,7 +22,11 @@ description: Using satellite imagery to monitor remote rural economies at high f
 
 Despite global progress in reducing extreme poverty, stubborn pockets remain, often in remote and fragile regions. A fundamental obstacle to further progress is that remoteness and fragility also constrain our ability to monitor economic conditions. Using satellite imagery, we develop a new approach to monitor economic activity at periodic markets, focal points for rural trade throughout history and much of the world today. We describe how to detect marketplaces without pre-existing maps and how to construct an up-to-weekly measure of their activity. We show that we successfully detect marketplaces and that activity correlates with other measures of economic activity, captures seasonal patterns, and responds to local weather and conflict. Drawing on high frequency, globally available imagery, our approach enables real-time monitoring of economic activity independent of ground conditions.
 
+&nbsp;
+
 ### Which marketplaces does our methodology detect?
+
+&nbsp;
 
 The term ‘market’ can describe a wide range of phenomena. We focus on locations where people gather to trade on a weekly basis and, at least partly, under open-air. These two features allow us to identify marketplaces in high-resolution satellite imagery without prior knowledge of their locations. Market detection proceeds in two main steps.
 
@@ -30,7 +34,11 @@ We identify locations that are relatively likely to have marketplaces - towns, r
 
 Note that the MAI does not necessarily capture every location where trade occurs. There could be markets we haven't screened yet, or ones where our method doesn’t detect a periodic signal. For more details on the accuracy of our approach, have a look at our [working paper](https://arxiv.org/abs/2407.12953).
 
+&nbsp;
+
 ### How we detect markets and market activity
+
+&nbsp;
 
 Marketplaces appear differently in satellite imagery on market days compared to non-market days. On the former, colourful crowds, stalls and vehicles cover the market area, whereas on the latter, bare ground or asphalt will be visible. From each satellite image taken on a local market day, we construct a summary measure of the differences between that day and the market’s usual appearance on a non-market day. The larger these aggregate differences, the less of the bare ground is visible, and we assume that this reflects a busier market.
 
